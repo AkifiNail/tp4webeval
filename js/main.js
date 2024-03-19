@@ -63,6 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }).showToast();
   }
 
+  function deleteMessages() {
+    let messagesTable = document.getElementById("messages");
+    messagesTable.innerHTML = ""; // Supprime tout le contenu de la table
+  }
+
+  let deleteButton = document.getElementById("deleteMessages");
+  deleteButton.addEventListener("click", function () {
+    deleteMessages();
+    showToast("Messages supprimés avec succès !", "#00b09b");
+  });
+
   button.addEventListener("click", function (event) {
     event.preventDefault(); // ce truc la empeche que le formulaire refresh a chaque fois
     if (checkForm() && checkEmail()) {
