@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let newRow = messagesTable.insertRow();
 
     newRow.innerHTML = `
-            <td>${firstName}</td>
-            <td>${lastName}</td>
-            <td>${email}</td>
-            <td>${message}</td>
+            <td>${firstName}<i class="bi bi-check2"></i></td>
+            <td>${lastName}<i class="bi bi-check2"></i></td>
+            <td>${email}<i class="bi bi-check2"></i></td>
+            <td>${message}<i class="bi bi-check2"></i></td>
         `;
   }
 
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function deleteMessages() {
     let messagesTable = document.getElementById("messages");
-    messagesTable.innerHTML = ""; // Supprime tout le contenu de la table
+    messagesTable.innerHTML = "";
   }
 
   let deleteButton = document.getElementById("deleteMessages");
